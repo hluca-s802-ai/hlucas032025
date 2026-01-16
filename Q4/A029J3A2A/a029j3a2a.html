@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029J3A2A</title>
+    <style>
+        body
+        {
+            background-color: steelblue;
+        }
+        h1, h2
+        {
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+        }
+        #rotator
+        {
+            height: 10rem;
+            width: 10rem;
+            background-color: coral;
+            border: 1px solid white;
+            margin-left: 5rem;
+
+
+            animation-name: rotate;
+            animation-duration: 3s;
+            animation-iteration-count: 10;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes rotate
+        {
+            from
+            {
+                margin-left: 0;
+                background-color: lime;
+                transform: rotate(0deg);
+            }
+            to
+            {
+                margin-left: 25rem;
+            background-color: red;
+            transform: rotate(1800deg);
+            }
+            
+        }
+        #jump
+        {
+            width: 10rem;
+            height: 10rem;
+            background-color: blue;
+
+            animation-name: jump;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes jump
+        {
+            from{}
+            to{transform:translate(0px, -100px)
+            }
+        }
+    </style>
+</head>
+<body>
+        <h1>A029J3A2A</h1>
+        <h2>Keyframes From To</h2>
+        
+        <div id="rotator"></div>
+        <div id="jump"></div>
+        <div id="fall"></div>
+</body>
+</html>

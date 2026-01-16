@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Images</title>
+    <style>
+        html
+        {
+            height: 100%;
+            background-image: url(Images/mariolevelbackground.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        body
+        {
+            overflow: hidden;
+        }
+        #charactercontainer
+        {
+            width: 210px;
+            height: 400px;
+
+            animation-name: moverightandleft;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes moverightandleft
+        {
+            from{margin-left: -0px;}
+            to{margin-left: 100%;}
+        }
+
+        #mario
+        {
+            width: 200px;
+            height: 200px;
+            margin-top: 800px;
+
+            background-image: url(images/mario.png);
+            background-repeat: no-repeat;
+
+            animation-name: jump;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes jump
+        {
+            from{margin-top: 800px;}
+            to{margin-top: 150px;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Animated Images</h1>
+    <div id="charactercontainer">
+        <div id="mario"></div>
+    </div>
+
+</body>
+</html>
